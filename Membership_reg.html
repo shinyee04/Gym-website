@@ -1,0 +1,160 @@
+<html>
+<head>
+    <title>Membership Reg Form</title>
+
+<style type="text/css">
+    body{
+        font-family: Calibri;
+    }
+    input[type="text"] {
+        width: 250px;
+    }
+    input[type="submit"], input[type="reset"] {
+        width: 77px;
+        height: 27px;
+        position: relative;left: 180px;
+    }
+    form{
+        text-align: center;
+        font-family: Calibri;
+        font-size: 20px;
+        border: 5px solid green;
+        width: 600px;
+        margin: 20px auto;
+    }
+    td {
+        padding: 10px;
+    }
+    td:first-child {
+        text-align: right;
+        font-weight: bold;
+    }
+    td:last-child {
+        text-align: left;
+
+</style>
+
+<style>
+body {
+  background-image: url('https://i.pinimg.com/736x/29/38/b0/2938b0d149af8f1164a4f74fd2d14b8d.jpg');
+}
+</style>
+
+
+<script>
+        function validate() {
+            var fname = document.Membership_reg.fname;
+            var lname = document.Membership_reg.lname;
+            var address = document.Membership_reg.address;
+            var gender = document.Membership_reg.gender;
+            var email = document.Membership_reg.email;
+            var mobile = document.Membership_reg.mobile;
+            var course = document.Membership_reg.course;
+
+            if (fname.value.length <= 0) {
+                alert("Name is required");
+                fname.focus();
+                return false;
+            }
+            if (lname.value.length <= 0) {
+                alert("Last Name is required");
+                lname.focus();
+                return false;
+            }
+            if (address.value.length <= 0) {
+                alert("Address is required");
+                address.focus();
+                return false;
+            }
+            if (gender.value.length <= 0) {
+                alert("Gender is required");
+                gender.focus();
+                return false;
+            }
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            if (mobile.value.length <= 0) {
+                alert("Mobile number is required");
+                mobile.focus();
+                return false;
+            }
+            if (membership.value == "select membership") {
+                alert("Membership is required");
+                membership.focus();
+                return false;
+            }
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+    <center><h1>Membership Registration Form</h1></center>
+    <hr>
+    <form method="" action="" name="Membership_reg" onsubmit="return validate()">
+        <h2>Registration Form</h2>
+        <table>
+            <tr>
+                <td><label>First Name: </label></td>
+                <td>
+                    <input type="text" name="fname" placeholder="First Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Last Name: </label></td>
+                <td>
+                    <input type="text" name="lname" placeholder="Last Name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" size="50" name="address" placeholder="Address">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="femele">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email Id: </label></td>
+                <td>
+                    <input type="text" name="email" placeholder="example@gmail.com">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Mobile: </label></td>
+                <td>
+                    <input type="number" name="mobile">
+                </td>
+            </tr>
+            <tr>
+            <td><label>Membership: </label></td>
+                <td>
+                    <select name="membership">
+                        <option value="select membership">select membership type :</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Golden">Golden</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+	
+
+
+
+</body>
+</html>
